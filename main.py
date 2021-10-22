@@ -67,7 +67,8 @@ for i in range(2, 29):
     img = cv.imread(template_path)
 
     # choose the font from opencv
-    font = cv.FONT_HERSHEY_TRIPLEX
+    # font = cv.FONT_HERSHEY_TRIPLEX
+    font = cv.FONT_HERSHEY_COMPLEX
 
     thickness = 2
     # get the size of the name to be
@@ -138,7 +139,7 @@ for i in range(2, 29):
                font,
                font_size,
                font_color, thickness)
-    certi_path = output_path + '/certi' + certi_name + '.png'
+    certi_path = output_path + '/' + certi_name + certi_school_name + certi_event_name + '.png'
 
     # Save the certificate
     cv.imwrite(certi_path, img)
